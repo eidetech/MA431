@@ -1,6 +1,6 @@
 clc; close all; clear all;
 
-m = 90; % kg
+m = 80; % kg
 b1 = 15; % Drag coefficient before parachute is deployed
 b2 = 7*b1; % Drag coefficient after parachute is deployed
 g = -9.81; % Gravity, m/s^2
@@ -56,3 +56,6 @@ grid
 subplot(3,1,3)
 plot(timePlot(yPlot >= 0), yDotDotPlot(yPlot >= 0), 'LineWidth',2)
 grid
+
+x = timePlot(yPlot>=0);
+endTime = x(end)
